@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    {% include "partials/head.html" %}
+
+    {% include "partials/social.html" %}
+</head>
+
+<body class="{% block body_class %}body{% endblock %}">
+{% include "partials/scripts-body.html" %}
+
+<div class="wrapper" id="app">
+    {% include "partials/header.html" %}
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.html" %}
+
+</div>
+
+{% include "partials/scripts.html" %}
+</body>
+</html>
